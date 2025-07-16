@@ -14,7 +14,6 @@ It fetches media files from the NoviSign API and displays them in a slideshow.
 - Handle empty & error states
 - Keep slideshow progress after screen rotation
 
----
 
 ## Tech Stack
 
@@ -26,3 +25,8 @@ It fetches media files from the NoviSign API and displays them in a slideshow.
 - **MVVM architecture**
 - **MockK** (unit testing)
 
+
+## Screenshots
+
+<img src="screenshots/screenshot2.jpeg" height="250" /> <img src="screenshots/screenshot1.jpeg" width="250" /> 
+ 
