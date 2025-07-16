@@ -26,16 +26,19 @@ fun MainScreen(viewModel: SlideshowViewModel = viewModel()) {
                 CircularProgressIndicator()
             }
         }
+
         is UiState.Error -> {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("Error: ${(state as UiState.Error).message}")
             }
         }
+
         is UiState.Empty -> {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("No playlist items found.")
             }
         }
+
         is UiState.Success -> {
             val slides = (state as UiState.Success).slides
             SlideshowPlayer(

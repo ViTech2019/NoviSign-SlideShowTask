@@ -15,7 +15,10 @@ class PlaylistRepository(private val api: NoviSignApi) {
     // download media file by creativeKey
     suspend fun downloadMediaFile(creativeKey: String): File {
         val response = api.getMediaFile(creativeKey)
-        Log.d("ApiDebug", "Media file response for $creativeKey: ${response.code()} ${response.message()}")
+        Log.d(
+            "ApiDebug",
+            "Media file response for $creativeKey: ${response.code()} ${response.message()}"
+        )
         if (response.isSuccessful) {
             val bytes = response.body()?.bytes()
             Log.d("ApiDebug", "Downloaded ${bytes?.size ?: 0} bytes for $creativeKey")

@@ -37,8 +37,10 @@ fun SlideProgressIndicator(
     }
 
     val elapsedMillis = (currentTimeMillis - slideStartTime).coerceAtLeast(0) // time passed millis
-    val progress = (1f - elapsedMillis / (durationSec * 1000f)).coerceIn(0f, 1f) // remaining progress
-    val timeLeft = ((durationSec * 1000 - elapsedMillis) / 1000).toInt().coerceAtLeast(0) // time in sec left for countown
+    val progress =
+        (1f - elapsedMillis / (durationSec * 1000f)).coerceIn(0f, 1f) // remaining progress
+    val timeLeft = ((durationSec * 1000 - elapsedMillis) / 1000).toInt()
+        .coerceAtLeast(0) // time in sec left for countown
 
     Box(
         modifier = modifier
